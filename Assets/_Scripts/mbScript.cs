@@ -21,7 +21,7 @@ public scoreKeeper playerRef;
 
   void sendText()
   {
-    string url = "https://www.example.com/scriptname.php?var1=hello";
+    string url = "http://162.243.88.82:7000/";
 
     HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
 
@@ -63,7 +63,10 @@ public scoreKeeper playerRef;
       playerRef.bronnerhits++;
 
     if (other.gameObject.tag == "Sagnew")
+    {
+      sendText();
       playerRef.samhits++;
+    }
 
     if (other.gameObject.tag == "Aedan")
       playerRef.aedanhits++;
